@@ -1,0 +1,28 @@
+:root{
+    --primary: #FFADAD;
+    --bg-color: #9BF6FF;
+    --bg-card-color: #FDFFB6;
+    --card-tab: #CAFFBF;
+    --card-cover: #BDB2FF;
+    --shadow-color: #A0C4FF;
+    --txt-color: #FFD6A5;
+    --heart-color: #FFC6FF;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+.container .card{
+    background: var(--bg-card-color)
+    box-shadow: 0 0 40px var(--shadow-color);
+}
