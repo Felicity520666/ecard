@@ -22,7 +22,46 @@ body{
     display: grid;
     place-items: center;
 }
-.container .card{
-    background: var(--bg-card-color)
+.container .card-wrapper{
+    background: var(--bg-card-color);
     box-shadow: 0 0 40px var(--shadow-color);
+}
+.container .card-warpper .card{
+    position: relative;
+    width: 300px;
+    height: 230px;
+}
+.container .card-wrapper .card::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    border-top: 130px solid var(--card-tab);
+    border-right: 150px solid transparent;
+    border-left: 150px solid transparent;
+    transform-origin: top;
+    transition: all 0.5s ease-in-out 0.7s;
+}
+.container .card-warpper .card::after{
+    content:"";
+    position: absolute;
+    z-index: 2;
+    width: 0;
+    height: 0;
+    border-top: 130px solid transparent;
+    border-right: 150px solid var(--card-cover);
+    border-bottom: 100px solid var(--card-cover);
+    border-left: 150px solid var(--card-cover);
+}
+.container .card-wrapper .card .letter{
+    position: absolute;
+    right: 20%;
+    bottom: 0;
+    width: 50%;
+    height: 80%;
+    background: var(--primary);
+    text-align: center;
+    transition: all 1s ease-in-out;
+    box-shadow: 0 0 5px var(--shadow-color);
+    padding: 20px 10px;
 }
