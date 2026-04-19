@@ -1,3 +1,46 @@
+.schoolbell-regular {
+  font-family: "Schoolbell", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+html, body{
+    cursor: none;
+}
+.custom-cursor{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+}
+.site{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid var(--primary);
+    transition: transform 0.12s ease, background-color 0.12s ease;
+}
+.site.active{
+    transform: translate(-50%, -50%) scale(0.75);
+    background-color: var(--primary);
+    opacity: 0.35;
+}
+.site .pointer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--primary);
+}
 :root{
     --primary: #FFADAD;
     --bg-color: #9BF6FF;
@@ -11,7 +54,7 @@
 body{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: "Patrick Hand", "Schoolbell", cursive;
     background: var(--bg-color);
     display: flex;
     justify-content: center;
@@ -23,15 +66,18 @@ body{
     place-items: center;
 }
 .container .card-wrapper{
+    position: relative;
+    width: 300px;
+    height: 230px;
     background: var(--bg-card-color);
     box-shadow: 0 0 40px var(--shadow-color);
 }
-.container .card-warpper .card{
+.container .card-wrapper .card{
     position: relative;
     width: 300px;
     height: 230px;
 }
-.container .card-wrapper .card::before{
+.card-wrapper > .card::before{
     content: "";
     position: absolute;
     top: 0;
@@ -42,7 +88,7 @@ body{
     transform-origin: top;
     transition: all 0.5s ease-in-out 0.7s;
 }
-.container .card-warpper .card::after{
+.container .card-wrapper .card::after{
     content:"";
     position: absolute;
     z-index: 2;
@@ -53,10 +99,10 @@ body{
     border-bottom: 100px solid var(--card-cover);
     border-left: 150px solid var(--card-cover);
 }
-.container .card-wrapper .card .letter{
+.card > .letter{
     position: absolute;
-    right: 20%;
-    bottom: 0;
+    left: 50%;
+    top: 50%;
     width: 50%;
     height: 80%;
     background: var(--primary);
@@ -64,4 +110,53 @@ body{
     transition: all 1s ease-in-out;
     box-shadow: 0 0 5px var(--shadow-color);
     padding: 20px 10px;
+    transform: translate(-50%, -50%);
+}
+
+.container .card-wrapper .card .letter .text {
+    font-family: "Schoolbell", cursive;
+    color: var(--txt-color);
+    text-align: left;
+    font-size: 10px;
+}
+.heart{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    background: var(--heart-color);
+    z-index: 4;
+    transform: translate(-50%, -50%) rotate(-66deg);
+    transition: transform 0.5s ease-in-out 1s;
+    box-shadow: 0 1px 6px var(--shadow-color);
+    cursor: pointer;
+}
+.heart::before,
+.heart::after{
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: var(--heart-color);
+    border-radius: 50%;
+}
+.heart::before{
+    top: -12px;
+}
+.heart::after{
+    right: -12px;
+}
+.flap .heart{
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition-delay: 0.4s;
+}
+.flap .card::before{
+    transform: rotateX(180deg);
+    z-index: 0;
+}
+.flap .card .letter{
+    top: 20%;
+    transform: translate(-50%, -50%) scale(1.2);
+    transition-delay: 1s;
 }

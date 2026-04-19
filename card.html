@@ -3,10 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>E-CARD</title>
     <link rel="stylesheet" href="card_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Schoolbell&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="media/favicon.png">
 </head>
 <body>
+    <div class="custom-cursor site">
+        <div class="pointer"></div>
+    </div>
+    <script src="main.js"></script>
     <div class="container">
         <div class="card-wrapper">
             <div class="card">
@@ -21,5 +29,13 @@
             <div class="heart"></div>
         </div>
     </div>
+    <script>
+        const envelope = document.querySelector(".card-wrapper");
+        const heart = document.querySelector(".heart");
+        heart.addEventListener("click", () => {
+            envelope.classList.toggle("flap")
+        });
+
+    </script>
 </body>
 </html>
