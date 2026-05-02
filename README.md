@@ -14,7 +14,7 @@ I've always wanted to create something special for Renran since she introduced m
 
 - music toggle button 
 - heart nutton to open the envelope
-- hover effects that shows the suprise message hidden behind the image (*ᴗ͈ˬᴗ͈)ꕤ*.ﾟ
+- hover effects that shows the suprise message hidden behind the image (ᴗ͈ˬᴗ͈)ꕤ*.ﾟ
 
 ## Creator
 
