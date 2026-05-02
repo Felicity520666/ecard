@@ -109,7 +109,7 @@ body{
     border-right: 150px solid transparent;
     border-left: 150px solid transparent;
     transform-origin: top;
-    transition: all 0.5s ease-in-out 0.7s;
+    transition: transform 0.5s ease-in-out 0.7s, z-index 0s linear 1.25s;
 }
 .container .card-wrapper .card::after{
     content:"";
@@ -136,6 +136,11 @@ body{
     overflow: hidden;
     z-index: 1;
     transform: translate(-50%, -50%);
+}
+
+.card > .letter .text {
+    position: relative;
+    z-index: 1;
 }
 
 .container .card-wrapper .card .letter .text {
@@ -180,7 +185,7 @@ body{
 .flap .heart{
     transform: translate(-50%, -50%) rotate(45deg);
     transition-delay: 0.4s;
-    z-index: 1;
+    z-index: 11;
 }
 .flap .card{
     z-index: 7;
@@ -190,51 +195,49 @@ body{
     z-index: 0;
 }
 .flap .card .letter{
-    top: 24%;
+    top: 4%;
     transform: translate(-50%, -50%) scale(1.14) rotate(0deg);
-    z-index: 9;
-    transition-delay: 0.9s;
+    z-index: 1;
+    transition-delay: 1.25s;
 }
 .flap .card:hover .letter{
     transform: translate(-50%, -60%) scale(1.18) rotate(0deg);
     box-shadow: 0 16px 26px var(--shadow-color);
 }
 .left-side{
-    display: block;
     position: absolute;
-    top: 56%;
-    left: 14%;
+    display: block;
+    top: 0;
+    left: 0;
     background-image: url("media/pink.png");
     background-size: 200% 100%;
     background-position: left center;
     background-repeat: no-repeat;
-    width: 36%;
-    height: 82%;
-    transform: translateY(-50%) scale(1) rotateY(0deg);
+    width: 50%;
+    height: 100%;
+    transform: rotateY(0deg);
     transform-origin: left;
     transition: transform 0.7s ease, opacity 0.25s ease;
-    backface-visibility: hidden;
     z-index: 10;
-    opacity: 0;
+    opacity: 1;
     pointer-events: none;
 }
 .right-side {
-    display: block;
     position: absolute;
-    top: 56%;
-    right: 14%;
+    display: block;
+    top: 0;
+    right: 0;
     background-image: url("media/pink.png");
     background-size: 200% 100%;
     background-position: right center;
     background-repeat: no-repeat;
-    width: 36%;
-    height: 82%;
-    transform: translateY(-50%) scale(1) rotateY(0deg);
+    width: 50%;
+    height: 100%;
+    transform: rotateY(0deg);
     transform-origin: right;
     transition: transform 0.7s ease, opacity 0.25s ease;
-    backface-visibility: hidden;
     z-index: 10;
-    opacity: 0;
+    opacity: 1;
     pointer-events: none;
 }
 .back-side {
@@ -249,20 +252,13 @@ body{
     opacity: 0;
     transition: opacity 0.4s ease;
 }
-.flap .left-side,
-.flap .right-side,
+
 .flap .back-side {
     opacity: 1;
 }
-.flap .left-side,
-.flap .right-side {
-    top: 24%;
+.flap .letter:hover .left-side {
+    transform: rotateY(-88deg);
 }
-.flap .card:hover .left-side {
-    transform: translate(-64px, -50%) scale(1) rotateY(-88deg);
-    opacity: 0.08;
-}
-.flap .card:hover .right-side {
-    transform: translate(64px, -50%) scale(1) rotateY(88deg);
-    opacity: 0.08;
+.flap .letter:hover .right-side {
+    transform: rotateY(88deg);
 }
