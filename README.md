@@ -8,15 +8,15 @@ I used html, css, and some javascript to create this cute little e-card. It comb
 
 ## Why I Made This
 
-I've always wanted to create something special for Renran since she introduced me to this amazing Hack Club community and guided me through my very first coding project. And Coeur YSWS gave me the idea of making an e-card, which I never thought I could do! I learnt what an e-card is and tried using html and css the first time! I am reallt happy that I made it.
+I've always wanted to create something special for Renran since she introduced me to this amazing Hack Club community and guided me through my very first coding project. And Coeur YSWS gave me the idea of making an e-card, which I never thought I could do! I learnt what an e-card is and tried using html and css the first time! I am really happy that I made it.
 
 ## Features
 
 - music toggle button 
-- heart nutton to open the envelope
+- pink heart button to open the envelope
 - hover effects that shows the suprise message hidden behind the image (ᴗ͈ˬᴗ͈)ꕤ*.ﾟ
 
 ## Creator
 
-( ⸝⸝•ᴗ•⸝⸝ )੭⁾⁾ Hihi! My name is Felicity. I am still a beginner in coding, and I hope you enjoy this e-card as much as I enjoyed making it! 
+( ⸝⸝•ᴗ•⸝⸝ )੭⁾⁾ Hihi! My name is Felicity and I am still a beginner in coding. I hope you enjoy this e-card as much as I enjoyed making it! :3
 
