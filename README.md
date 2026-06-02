@@ -8,7 +8,7 @@ I used html, css, and some javascript to create this cute little e-card. It comb
 
 ## Why I Made This
 
-I've always wanted to create something special for Renran since she introduced me to this amazing Hack Club community and guided me through my very first coding project. And Coeur YSWS gave me the idea of making an e-card, which I never thought I could do! I learnt what an e-card is and tried using html and css the first time! I am really happy that I made it.
+I've always wanted to create something special for Renran since she introduced me to this amazing Hack Club community and guided me through my very first coding project. I never thought I could code an e-card, but I did it! I learnt what an e-card is and tried using html and css the first time! I am really happy that I made it.
 
 ## Features
 

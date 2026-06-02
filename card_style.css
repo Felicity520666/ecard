@@ -60,6 +60,38 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+}
+.falling-effects{
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 2;
+}
+.falling-particle{
+    position: absolute;
+    top: -10vh;
+    left: var(--start-x);
+    font-size: var(--size);
+    opacity: 0;
+    transform: translate3d(0, 0, 0) rotate(0deg);
+    animation: fall-particle var(--duration) linear var(--delay) infinite;
+    filter: drop-shadow(0 4px 4px rgba(255, 255, 255, 0.3));
+    user-select: none;
+}
+@keyframes fall-particle {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -12vh, 0) rotate(0deg);
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translate3d(var(--drift), 112vh, 0) rotate(var(--spin));
+    }
 }
 .music-toggle{
     position: fixed;
@@ -80,6 +112,8 @@ body{
     transform: translateY(-1px);
 }
 .container{
+    position: relative;
+    z-index: 3;
     height: 100vh;
     display: grid;
     place-items: center;

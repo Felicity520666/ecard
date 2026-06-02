@@ -11,6 +11,7 @@
     <link rel="icon" type="image/x-icon" href="media/favicon.png">
 </head>
 <body>
+    <div class="falling-effects" aria-hidden="true"></div>
     <button id="music-toggle" class="music-toggle" type="button">Play Music</button>
     <audio id="bg-music" loop preload="auto">
         <source src="media/nastelbom-love-488313.mp3" type="audio/mpeg">
@@ -39,13 +40,5 @@
             <div class="heart"></div>
         </div>
     </div>
-    <script>
-        const envelope = document.querySelector(".card-wrapper");
-        const heart = document.querySelector(".heart");
-        heart.addEventListener("click", () => {
-            envelope.classList.toggle("flap")
-        });
-
-    </script>
 </body>
 </html>
